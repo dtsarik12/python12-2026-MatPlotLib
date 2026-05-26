@@ -1,0 +1,15 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+data = np.random.normal(loc=0, scale=1, size=1000)
+
+plt.figure(figsize=(8, 5))
+
+plt.hist(data, bins=30, color='green', edgecolor='black', alpha=0.8)
+
+plt.xlabel('Значення даних')
+plt.ylabel('Частота (кількість точок)')
+plt.title('Гістограма нормального розподілу (1000 точок)')
+plt.grid(True, linestyle='--', alpha=0.5)
+
+plt.show()
