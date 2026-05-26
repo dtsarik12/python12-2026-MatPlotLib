@@ -1,0 +1,19 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+data1 = np.random.normal(loc=2, scale=1.5, size=1000)
+data2 = np.random.normal(loc=6, scale=1.0, size=1000)
+
+plt.figure(figsize=(9, 5))
+
+# задає однакокову кількість бінів
+plt.hist(data1, bins=35, color='royalblue', alpha=0.6, edgecolor='blue', label='Розподіл А (μ=2, σ=1.5)')
+plt.hist(data2, bins=35, color='darkorange', alpha=0.6, edgecolor='red', label='Розподіл Б (μ=6, σ=1.0)')
+
+plt.xlabel('Значення')
+plt.ylabel('Частота')
+plt.title('Порівняння двох нормальних розподілів')
+plt.grid(True, linestyle=':', alpha=0.6)
+plt.legend(loc='upper right')
+
+plt.show()
