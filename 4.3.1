@@ -1,0 +1,22 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
+
+fig, ax = plt.subplots(figsize=(8, 5))
+
+x = np.linspace(-2, 2, 100)
+y = x**3
+
+# передає x, y та налаштовує властивості
+line = Line2D(x, y, color='darkviolet', linewidth=3, linestyle='--', label='y = x³')
+
+ax.add_line(line)
+
+ax.set_xlim(-2.5, 2.5)
+ax.set_ylim(-9, 9)
+
+ax.set_title("створення лінії через об'єкт Line2D", fontsize=14)
+ax.grid(True, alpha=0.4)
+ax.legend()
+
+plt.show()
