@@ -1,0 +1,26 @@
+import matplotlib.pyplot as plt
+import matplotlib.patches as patches
+
+fig, ax = plt.subplots(figsize=(7, 7))
+
+rect = patches.Rectangle((1, 2), width=3, height=2, 
+                         edgecolor='navy', facecolor='skyblue', 
+                         linewidth=2, hatch='//')
+
+circle = patches.Circle((6, 6), radius=1.5, 
+                       edgecolor='darkgreen', facecolor='lightgreen', 
+                       linewidth=3, linestyle=':')
+
+ax.add_patch(rect)
+ax.add_patch(circle)
+
+ax.set_xlim(0, 10)
+ax.set_ylim(0, 10)
+
+# щоб коло не виглядало як еліпс
+ax.set_aspect('equal')
+
+ax.set_title("Геометричні фігури", fontsize=14)
+ax.grid(True, alpha=0.3)
+
+plt.show()
