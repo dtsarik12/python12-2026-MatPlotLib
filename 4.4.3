@@ -1,0 +1,17 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.random.randn(150)
+y = np.random.randn(150)
+
+plt.figure(figsize=(8, 6))
+
+# s — розмір точок, c — колір, marker — форма
+plt.scatter(x, y, s=60, color='crimson', marker='o', edgecolors='black', alpha=0.8)
+
+plt.xlabel('Змінна X')
+plt.ylabel('Змінна Y')
+plt.title('Точковий графік (Scatter Plot) випадкових величин')
+plt.grid(True, alpha=0.4)
+
+plt.show()
