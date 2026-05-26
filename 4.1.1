@@ -1,0 +1,25 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# для відображення кирилиці на графіках
+plt.rcParams['font.family'] = 'DejaVu Sans'
+
+# 4.1.1
+
+x1 = np.linspace(-5, 5, 100)
+y1_pure = x1**2
+
+# Додавання випадкового шуму (нормальний розподіл)
+noise = np.random.normal(0, 2, size=x1.shape)
+y1_noisy = y1_pure + noise
+
+plt.figure(figsize=(8, 5))
+plt.plot(x1, y1_noisy, color='crimson', linewidth=2.5, label='y = x² + шум')
+
+plt.xlabel('Вісь X (Аргумент)')
+plt.ylabel('Вісь Y (Значення функції)')
+plt.title('Графік функції y = x² з імітацією похибки вимірювань')
+plt.grid(True, linestyle='--', alpha=0.6)
+plt.legend(loc='upper center')
+
+plt.show()
